@@ -12,12 +12,12 @@
 
   <tbody>
     <% @pictures.each do |picture| %>
+      <th>投稿者：<%= picture.user.name %></th>
       <tr>
-        <td><%= picture.image %></td>
-        <td>投稿者：<%= picture.user.name %></td>
-        <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag(picture.image.url) %></td>
+      </tr>
+      <tr>
+        <td><%= link_to 'Show', picture %>/<%= link_to 'Edit', edit_picture_path(picture) %>/<%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

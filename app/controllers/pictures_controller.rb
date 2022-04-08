@@ -18,6 +18,8 @@ class PicturesController < ApplicationController
 
   def confirm
     @picture = current_user.pictures.build(picture_params)
+    # @picture = Picture.new(picture_params)
+    # @picture.user_id = current_user.id
     render :new if @picture.invalid?
   end
 
@@ -26,6 +28,8 @@ class PicturesController < ApplicationController
 
   def create
     @picture = current_user.pictures.build(picture_params)
+    # @picture = Picture.new(picture_params)
+    # @picture.user_id = current_user.id
     respond_to do |format|
       if @picture.save
         format.html { redirect_to picture_url(@picture), notice: "Picture was successfully created." }
@@ -65,6 +69,6 @@ class PicturesController < ApplicationController
   end
 
   def picture_params
-    params.require(:picture).permit(:image, :image_cache)
+    params.require(:picture).permit(:image, :image_cache, :content)
   end
 end
