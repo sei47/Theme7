@@ -14,8 +14,25 @@
   border: 1px solid black;
 }
 
+.text{
+  background: #f0f8ff;
+}
+
 .controll{
   font-size: 1rem;
-  background-color: white;
+  background-color: #f0f8ff;
   border: 1px solid black;
+}
+
+.user{
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  background-color: #f0f8ff;
+}
+.user_speace{
+  height: 5rem;
+}
+.link{
+  font-size: 2rem;
 }

@@ -1,9 +1,16 @@
-<p id="notice"><%= notice %></p>
-<p><%= @picture.content %></p>
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @picture.image.url %>
-</p>
+<div class="container">
+  <div class="row">
 
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+    <div class="home">
+      <p id="notice"><%= notice %></p>
+      <p>
+        <strong><%= @picture.content %></strong>
+        <%= image_tag @picture.image.url %>
+      </p>
+    </div>
+    <div class="controll">
+      <%= link_to 'Edit', edit_picture_path(@picture) %> |
+      <%= link_to 'Back', pictures_path %>
+    </div>
+  </div>
+</div>

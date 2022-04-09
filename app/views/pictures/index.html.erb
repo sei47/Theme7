@@ -10,7 +10,7 @@
         <% @pictures.each do |picture| %>
           <th>投稿者：<%= picture.user.name %></th>
           <tr>
-            <td><%= picture.content %></td>
+            <td class="text"><%= picture.content %></td>
           </tr>
           <tr>
             <td><%= image_tag(picture.image.url) %></td>
