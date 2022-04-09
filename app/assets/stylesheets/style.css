@@ -1,0 +1,21 @@
+.container{
+  min-height: 100%;
+  position: relative;
+}
+
+.new_button{
+  position: fixed;
+  top: 50px;
+  left: 30px;
+}
+
+.home{
+  background-color: #c0c0c0;
+  border: 1px solid black;
+}
+
+.controll{
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid black;
+}
