@@ -1,12 +1,9 @@
 <div class="container">
   <div class="row">
-
     <div class="home">
       <p id="notice"><%= notice %></p>
-      <p>
-        <strong><%= @picture.content %></strong>
-        <%= image_tag @picture.image.url %>
-      </p>
+      <p class="text"><%= @picture.content %></p>
+      <p><%= image_tag @picture.image.url %></p>
     </div>
     <div class="controll">
       <%= link_to 'Edit', edit_picture_path(@picture) %> |

@@ -9,6 +9,12 @@
   left: 30px;
 }
 
+.form{
+   display:block;
+   text-align: right;
+   width: 50%;
+}
+
 .home{
   background-color: #c0c0c0;
   border: 1px solid black;
@@ -33,6 +39,22 @@
 .user_speace{
   height: 5rem;
 }
+
+.new_and_edit{
+  background-color: #c0c0c0;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.new_and_edit h1{
+  color: #90ee90;
+}
+
+.back{
+  background-color: white;
+  border: thick double #32a1ce;
+}
+
 .link{
   font-size: 2rem;
 }
