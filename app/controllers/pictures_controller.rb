@@ -18,8 +18,6 @@ class PicturesController < ApplicationController
 
   def confirm
     @picture = current_user.pictures.build(picture_params)
-    # @picture = Picture.new(picture_params)
-    # @picture.user_id = current_user.id
     render :new if @picture.invalid?
   end
 
@@ -42,14 +40,11 @@ class PicturesController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @picture.update(picture_params)
-        format.html { redirect_to picture_url(@picture), notice: "Picture was successfully updated." }
-        format.json { render :show, status: :ok, location: @picture }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
-      end
+    if @picture.update(picture_params)
+      redirect_to pictures_path
+    else
+      format.html { render :edit, status: :unprocessable_entity }
+      format.json { render json: @picture.errors, status: :unprocessable_entity }
     end
   end
 
