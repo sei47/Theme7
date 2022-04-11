@@ -227,7 +227,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mini_magick
-  pg
+  pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.4, >= 6.0.4.7)
   sass-rails (>= 6)
